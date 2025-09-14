@@ -9,6 +9,7 @@ export default function DisplayName() {
     e.preventDefault();
 
     if(name.trim() === "" || lastName.trim() === "") {
+        setFullName("");
         return;
     }
 
@@ -41,14 +42,12 @@ export default function DisplayName() {
         <br />
         <button type="submit">Submit</button>
       </form>
-      <div style={{ marginTop: "20px" }}>
         {
             fullName &&    
-            <div>
+            <div style={{ marginTop: "20px" }}>
                 Full Name: {fullName}
             </div>
         }
-      </div>
     </div>
   );
 }
