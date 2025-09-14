@@ -38,10 +38,10 @@ export default function DisplayName() {
       </form>
       <div style={{ marginTop: "20px" }}>
         {
-            fullName && 
-            <div>
+            fullName ? 
+            (<div>
                 Full Name: {fullName}
-            </div>
+            </div>) : (null)
         }
       </div>
     </div>
