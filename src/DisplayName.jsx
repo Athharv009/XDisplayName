@@ -7,6 +7,11 @@ export default function DisplayName() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if(name.trim() === "" || lastName.trim() === "") {
+        return;
+    }
+
     setFullName(`${name} ${lastName}`);
   };
 
@@ -38,10 +43,10 @@ export default function DisplayName() {
       </form>
       <div style={{ marginTop: "20px" }}>
         {
-            fullName ? 
-            (<div>
+            fullName &&    
+            <div>
                 Full Name: {fullName}
-            </div>) : (null)
+            </div>
         }
       </div>
     </div>
